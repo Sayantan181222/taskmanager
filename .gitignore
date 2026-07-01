@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store          # macOS (Sayan)
+Thumbs.db          # Windows (Satyem, Anant)
+
+# Secrets (never commit these)
+.env
+*.key
+secrets.py
