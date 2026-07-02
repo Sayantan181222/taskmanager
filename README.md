@@ -16,7 +16,7 @@ to learn professional Git and GitHub workflow.
 taskmanager/
 ├── main.py        # Entry point
 ├── tasks.py       # Task data model (Sayan)
-├── display.py     # Display logic (Satyem)
+├── display.py     # Display logic (Satyam)
 ├── storage.py     # File I/O (Anant)
 └── data/
     └── tasks.json # Task storage
