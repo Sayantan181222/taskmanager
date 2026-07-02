@@ -8,7 +8,7 @@ to learn professional Git and GitHub workflow.
 | Name | Role | Branch |
 |------|------|--------|
 | Sayantan (Sayan) | Task model + core logic | feature/add-task |
-| Satyem | Display + listing | feature/list-tasks |
+| Satyam | Display + listing | feature/list-tasks |
 | Anant | Storage + JSON persistence | feature/delete-task |
 
 ## Project Structure
