@@ -24,3 +24,4 @@ Thumbs.db          # Windows (Satyem, Anant)
 *.key
 secrets.pydata/tasks.json
 .DS_Store
+data/tasks.json
