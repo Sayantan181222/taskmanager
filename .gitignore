@@ -22,4 +22,5 @@ Thumbs.db          # Windows (Satyem, Anant)
 # Secrets (never commit these)
 .env
 *.key
-secrets.py
+secrets.pydata/tasks.json
+.DS_Store
