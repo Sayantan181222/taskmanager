@@ -1,4 +1,4 @@
-# tasks.py — Sayantan
+# tasks.py -- Sayantan
 # Task data model and task management logic
 
 class Task:
@@ -18,7 +18,7 @@ class Task:
         self.status = "done"
 
     def __repr__(self):
-        return f"Task({self.task_id}, '{self.title}', {self.status})"
+        return "Task({}, '{}', {})".format(self.task_id, self.title, self.status)
 
 
 def add_task(tasks_list, title):
@@ -29,5 +29,5 @@ def add_task(tasks_list, title):
     new_id = max((t["id"] for t in tasks_list), default=0) + 1
     new_task = Task(new_id, title.strip())
     tasks_list.append(new_task.to_dict())
-    print(f"Added task [{new_id}]: {title.strip()}")
+    print("Added task [{}]: {}".format(new_id, title.strip()))
     return tasks_list
