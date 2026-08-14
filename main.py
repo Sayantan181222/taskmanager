@@ -3,11 +3,12 @@ from tasks import add_task
 from display import show_all_tasks, show_task_count
 from storage import load_tasks, save_tasks, delete_task
 
+
+ 
 def main():
-    print("Task Manager v2.0 -- by Sayan")
+    print("Task Manager v2.0 -- Team Edition")
     print("------------------")
     tasks = load_tasks()
-
     if len(sys.argv) < 2:
         show_all_tasks(tasks)
         show_task_count(tasks)
