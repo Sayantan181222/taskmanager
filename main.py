@@ -4,7 +4,7 @@ from display import show_all_tasks, show_task_count
 from storage import load_tasks, save_tasks, delete_task
 
 def main():
-    print("Task Manager v1.0 -- CLI Tool")
+    print("Task Manager v2.0 -- Team Edition")
     print("------------------")
     tasks = load_tasks()
 
