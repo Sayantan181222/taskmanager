@@ -30,3 +30,5 @@ taskmanager/
 ## Workflow
 
 We follow GitHub Flow: feature branches → pull requests → code review → merge to main.
+
+![CI](https://github.com/Sayantan181222/taskmanager/actions/workflows/ci.yml/badge.svg)
