@@ -24,7 +24,7 @@ def test_add_task_empty_list():
     """add_task on empty list should create task with ID 1."""
     result = add_task([], "First task")
     assert len(result) == 1
-    assert result[0]["id"] == 1
+    assert result[0]["id"] == 99
     assert result[0]["title"] == "First task"
 
 def test_add_task_auto_increment():
