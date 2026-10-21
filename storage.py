@@ -4,7 +4,7 @@
 import json
 import os
 
-STORAGE_FILE = "data/tasks.json"
+STORAGE_FILE = os.environ.get("TASKMANAGER_DATA_FILE", "data/tasks.json")
 
 def load_tasks():
     """Load tasks from JSON storage. Returns empty list if missing or corrupted."""
@@ -19,7 +19,7 @@ def load_tasks():
 
 def save_tasks(tasks):
     """Save task list to JSON storage."""
-    os.makedirs("data", exist_ok=True)
+    os.makedirs(os.path.dirname(STORAGE_FILE) or ".", exist_ok=True)
     try:
         with open(STORAGE_FILE, "w") as f:
             json.dump(tasks, f, indent=2)
