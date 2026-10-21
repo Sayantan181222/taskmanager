@@ -32,3 +32,15 @@ taskmanager/
 We follow GitHub Flow: feature branches → pull requests → code review → merge to main.
 
 ![CI](https://github.com/Sayantan181222/taskmanager/actions/workflows/ci.yml/badge.svg)
+## Run with Docker
+
+Build the image and run the app without installing Python locally:
+
+```bash
+docker compose build
+docker compose run --rm app add "Buy groceries"
+docker compose run --rm app list
+```
+
+Tasks are stored in a named volume (`task-data`), so they persist between runs.
+To delete the stored tasks, run `docker compose down -v`.
