@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: taskmanager:dev
+    volumes:
+      - task-data:/app/data
+
+volumes:
+  task-data:
