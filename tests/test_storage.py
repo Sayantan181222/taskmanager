@@ -3,6 +3,7 @@ import sys
 import os
 import json
 import tempfile
+import importlib
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import storage
@@ -38,3 +39,13 @@ def test_delete_task_nonexistent(tmp_path, monkeypatch):
     tasks = [{"id": 1, "title": "Task", "status": "pending"}]
     result = storage.delete_task(tasks, 99)
     assert len(result) == 1
+
+def test_storage_file_reads_env_var(monkeypatch):
+    """STORAGE_FILE should come from TASKMANAGER_DATA_FILE when it is set."""
+    monkeypatch.setenv("TASKMANAGER_DATA_FILE", "custom/path/tasks.json")
+    importlib.reload(storage)
+    assert storage.STORAGE_FILE == "custom/path/tasks.json"
+
+    monkeypatch.delenv("TASKMANAGER_DATA_FILE")
+    importlib.reload(storage)
+    assert storage.STORAGE_FILE == "data/tasks.json"
